@@ -4,11 +4,32 @@
 
 // ¿Recuerdas qué hace iostream?
 #include <iostream>
-
+using namespace std;
 // ¿Qué funciones trae ahora utilerias.h? ¿Qué devuelve cada una?
 #include "utilerias.h"
 
 int main() {
+
+
+  int numero1;
+  int numero2;
+  double numero;
+  double suma  = 0.0;
+  double multiplicacion = 0.0;
+  double division = 0.0;
+  double resta = 0.0;
+  
+ std:: cout << "CALCULADORA BASICA XDD" << endl;
+   std:: cout << "ingrese una opcion:v" << endl;
+
+    std:: cout << "suma" << endl;
+    std:: cout << "multplicacion" << endl;
+    std:: cout << "resta"<<endl;
+    std:: cout << "division" <<endl;
+    
+         
+
+
     // Variables (siempre inicializadas)
     // TODO: opcion, a, b, resultado y simbolo.
     //       ¿De qué tipo es cada una? Revisa la sección 2 de tu README.
