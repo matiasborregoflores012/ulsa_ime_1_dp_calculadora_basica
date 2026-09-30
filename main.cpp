@@ -26,10 +26,15 @@ int main() {
     std:: cout << "multplicacion" << endl;
     std:: cout << "resta"<<endl;
     std:: cout << "division" <<endl;
-    
-         
 
+    std:: cin >> suma;    
+   
+     std:: cout << "numero1";
+        std:: cin >> numero1;
+        std:: cout << "numero2";
+        std:: cin >> numero2;
 
+    suma = numero1 + numero2;
     // Variables (siempre inicializadas)
     // TODO: opcion, a, b, resultado y simbolo.
     //       ¿De qué tipo es cada una? Revisa la sección 2 de tu README.
