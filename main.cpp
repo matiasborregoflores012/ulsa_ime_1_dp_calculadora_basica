@@ -13,28 +13,56 @@ int main() {
 
   int numero1;
   int numero2;
+  int opcion;
   double numero;
   double suma  = 0.0;
-  double multiplicacion = 0.0;
+  double multiplicar = 0.0;
   double division = 0.0;
   double resta = 0.0;
   
  std:: cout << "CALCULADORA BASICA XDD" << endl;
    std:: cout << "ingrese una opcion:v" << endl;
 
-    std:: cout << "suma" << endl;
-    std:: cout << "multplicacion" << endl;
-    std:: cout << "resta"<<endl;
-    std:: cout << "division" <<endl;
+    std:: cout << "1. suma" << endl;
+    std:: cout << "2. multplicacion" << endl;
+    std:: cout << "3. division"<<endl;
+    std:: cout << "4. resta" <<endl;
 
-    std:: cin >> suma;    
-   
-     std:: cout << "numero1";
-        std:: cin >> numero1;
-        std:: cout << "numero2";
-        std:: cin >> numero2;
+    std:: cin >> opcion;    
+switch (opcion){
 
-    suma = numero1 + numero2;
+case 1:
+std:: cout << "ingrese numeros gg";
+std:: cin >> numero1;
+std:: cin >> numero2;  
+ suma = numero1 + numero2;
+  std:: cout << "suma " << suma << endl;
+     break;
+
+     case 2:
+std:: cout << "ingrese numeros gg";
+std:: cin >> numero1;
+std:: cin >> numero2;  
+ multiplicar = numero1 * numero2;
+  std:: cout << "multiplicar " << multiplicar << endl;
+     break;
+
+   case 3:
+   std:: cout << "ingrese numeros gg";
+std:: cin >> numero1;
+std:: cin >> numero2;  
+ division = numero1 / numero2;
+  std:: cout << "division " << division << endl;
+     break;
+
+      case 4:
+   std:: cout << "ingrese numeros gg";
+std:: cin >> numero1;
+std:: cin >> numero2;  
+ resta = numero1 - numero2;
+  std:: cout << "resta " << resta << endl;
+     break;
+}
     // Variables (siempre inicializadas)
     // TODO: opcion, a, b, resultado y simbolo.
     //       ¿De qué tipo es cada una? Revisa la sección 2 de tu README.
