@@ -11,8 +11,8 @@ using namespace std;
 int main() {
 
 
-  int numero1;
-  int numero2;
+  double numero1;
+  double numero2;
   int opcion;
   double numero;
   double suma  = 0.0;
