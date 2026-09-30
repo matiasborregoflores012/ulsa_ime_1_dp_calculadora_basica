@@ -32,36 +32,56 @@ int main() {
 switch (opcion){
 
 case 1:
-std:: cout << "ingrese numeros gg";
-std:: cin >> numero1;
-std:: cin >> numero2;  
+ std:: cout << "eligio suma" << endl;
+   std:: cout << "ingrese numero 1=";
+   std:: cin >> numero1;
+   std:: cout << "ingrese numero 2=";
+   std:: cin >> numero2;
+   
  suma = numero1 + numero2;
-  std:: cout << "suma " << suma << endl;
+  std:: cout << "suma=" << suma << endl;
      break;
 
      case 2:
-std:: cout << "ingrese numeros gg";
-std:: cin >> numero1;
-std:: cin >> numero2;  
+ std:: cout << "eligio multiplicacion"<<endl;
+   std:: cout << "ingrese numero 1=";
+   std:: cin >> numero1;
+   std:: cout << "ingrese numero 2=";
+   std:: cin >> numero2;
  multiplicar = numero1 * numero2;
-  std:: cout << "multiplicar " << multiplicar << endl;
+  std:: cout << "multiplicar=" << multiplicar << endl;
      break;
 
    case 3:
-   std:: cout << "ingrese numeros gg";
-std:: cin >> numero1;
-std:: cin >> numero2;  
+   std:: cout << "eligio division"<<endl;
+   std:: cout << "ingrese numero 1=";
+   std:: cin >> numero1;
+   std:: cout << "ingrese numero 2=";
+   std:: cin >> numero2;  
+if (numero2 !=0){
+
+}
+
  division = numero1 / numero2;
-  std:: cout << "division " << division << endl;
+
+  std:: cout << "division=" << division << endl;
+
+
+ 
      break;
 
       case 4:
-   std:: cout << "ingrese numeros gg";
-std:: cin >> numero1;
-std:: cin >> numero2;  
+    std:: cout << "eligio resta"<<endl;
+   std:: cout << "ingrese numero 1=";
+   std:: cin >> numero1;
+   std:: cout << "ingrese numero 2=";
+   std:: cin >> numero2;
  resta = numero1 - numero2;
-  std:: cout << "resta " << resta << endl;
+  std:: cout << "resta=" << resta << endl;
      break;
+
+
+     default:std:: cout << "solo puedes elegir del 1-4 por tonto, explota tu compu xd";
 }
     // Variables (siempre inicializadas)
     // TODO: opcion, a, b, resultado y simbolo.
