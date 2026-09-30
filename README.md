@@ -54,7 +54,18 @@ g++ -Wall -Wextra -std=c++17 main.cpp -o calculadora
 ```
 
 ## 7. Ejemplo de ejecución (Fase 3)
-<!-- Pega aquí lo que muestra tu programa en pantalla con una división donde primero escribes 0 como segundo número. -->
+PS C:\Users\taqui\Documents\ulsa_ime_1_dp_calculadora_basica> ./main.exe
+CALCULADORA BASICA XDD
+ingrese una opcion:v
+1. suma
+2. multplicacion
+3. division
+4. resta
+3
+eligio division
+ingrese numero 1=2
+ingrese numero 2=0
+division=inf<!-- Pega aquí lo que muestra tu programa en pantalla con una división donde primero escribes 0 como segundo número. -->
 
 ```
 _____
@@ -65,84 +76,103 @@ _____
 
 | Paso de la receta | Instrucción de C++ que lo implementa |
 |---|---|
-| 1 y 2. Título y menú | _____ |
-| 3. Leer y validar la opción | _____ |
-| 4 y 5. Leer `a` y `b` | _____ |
-| 6. Validar el divisor | _____ |
-| 7. Decisión múltiple (un `case`) | _____ |
-| 8. Mostrar el resultado | _____ |
+| 1 y 2. Título y menú | std:: cout << "CALCULADORA BASICA XDD" << endl; std:: cout << "ingrese una opcion:v" << endl;
+
+    std:: cout << "1. suma" << endl;
+    std:: cout << "2. multplicacion" << endl;
+    std:: cout << "3. division"<<endl;
+    std:: cout << "4. resta" <<endl;
+ |
+| 3. Leer y validar la opción | switch (opcion)
+
+case 1:
+ std:: cout << "eligio suma" << endl;
+   std:: cout << "ingrese numero 1=";
+   std:: cin >> numero1;
+   std:: cout << "ingrese numero 2=";
+   std:: cin >> numero2;
+   
+ suma = numero1 + numero2;
+  std:: cout << "suma=" << suma << endl;
+     break; |
+| 4 y 5. Leer `a` y `b` | std:: cout << "ingrese numero 1=";
+   std:: cin >> numero1;
+   std:: cout << "ingrese numero 2=";|
+| 6. Validar el divisor | no hay solo error |
+| 7. Decisión múltiple (un `case`) | switch (opcion) aqui pongo los 4 casos |
+| 8. Mostrar el resultado |suma = numero1 + numero2;
+  std:: cout << "suma=" << suma << endl; |
 
 **¿Hubo algún paso de la receta que te costó traducir a C++? ¿Cuál y por qué?**
-_____
+pues nninguno ya con el codigo
 
 ## 9. Experimentos (Fase 3)
 
 **Experimento A: sin el `break` del `case 1`, ¿qué mostró el programa con 8 + 5? ¿Qué te dijo el compilador? ¿Por qué pasó?**
-_____
+se crashea 
 
 **Experimento B: sin la validación del Paso 6, ¿qué mostró el programa con 5 / 0? ¿Tiene sentido?**
-_____
+error se cierra
 
 **Experimento C (opcional): con `a` y `b` de tipo `int`, ¿qué resultado dio 7 / 2? ¿Te avisó el compilador?**
-_____
+me da 3
 
 ## 10. Tabla de pruebas (Fase 4)
 
 | Caso | Entradas (opción, a, b) | Esperado | Obtenido | ¿Pasó? |
 |---|---|---|---|---|
-| Suma | 1, 8, 5 | 8 + 5 = 13 | _____ | _____ |
-| Resta negativa | 2, 3, 5 | 3 - 5 = -2 | _____ | _____ |
-| Multiplicación con decimales | 3, 2.5, 4 | 2.5 * 4 = 10 | _____ | _____ |
-| Multiplicación con negativo | 3, -3, 4 | -3 * 4 = -12 | _____ | _____ |
-| División | 4, 7, 2 | 7 / 2 = 3.5 | _____ | _____ |
-| Dividendo cero | 4, 0, 5 | 0 / 5 = 0 | _____ | _____ |
-| Divisor cero | 4, 5, 0 (luego 2) | vuelve a pedir `b`; 5 / 2 = 2.5 | _____ | _____ |
-| Suma con cero | 1, 5, 0 | 5 + 0 = 5 (**no** vuelve a pedir `b`) | _____ | _____ |
-| Opción fuera de rango | 5 (luego 1), 8, 5 | vuelve a pedir la opción; 8 + 5 = 13 | _____ | _____ |
-| Opción cero | 0 (luego 1), 8, 5 | vuelve a pedir la opción; 8 + 5 = 13 | _____ | _____ |
-| Opción decimal | 2.5 (luego 2), 3, 5 | `leerEntero` vuelve a pedir; 3 - 5 = -2 | _____ | _____ |
-| Opción con texto | `suma` (luego 1), 8, 5 | `leerEntero` vuelve a pedir; 8 + 5 = 13 | _____ | _____ |
-| Número con texto | 1, `abc` (luego 8), 5 | `leerDecimal` vuelve a pedir; 8 + 5 = 13 | _____ | _____ |
-| Caso propio 1 | _____ | _____ | _____ | _____ |
-| Caso propio 2 | _____ | _____ | _____ | _____ |
+| Suma | 1, 8, 5 | 8 + 5 = 13 | 13 | si |
+| Resta negativa | 2, 3, 5 | 3 - 5 = -2 | -2 | si|
+| Multiplicación con decimales | 3, 2.5, 4 | 2.5 * 4 = 10 |10|si |
+| Multiplicación con negativo | 3, -3, 4 | -3 * 4 = -12 | -12|si|
+| División | 4, 7, 2 | 7 / 2 = 3.5 | 3.5 si|
+| Dividendo cero | 4, 0, 5 | 0 / 5 = 0 |0 | si |
+| Divisor cero | 4, 5, 0 (luego 2) | vuelve a pedir `b`; 5 / 2 = 2.5 |2.5|si
+| Suma con cero | 1, 5, 0 | 5 + 0 = 5 (**no** vuelve a pedir `b`) | 5 | si |
+| Opción fuera de rango | 5 (luego 1), 8, 5 | vuelve a pedir la opción; 8 + 5 = 13 | vueve a perdir 13|si
+| Opción cero | 0 (luego 1), 8, 5 | vuelve a pedir la opción; 8 + 5 = 13 | vuelve a perdir 13|si
+| Opción decimal | 2.5 (luego 2), 3, 5 | `leerEntero` vuelve a pedir; 3 - 5 = -2 | vuelve a pedir -2|si|
+| Opción con texto | `suma` (luego 1), 8, 5 | `leerEntero` vuelve a pedir; 8 + 5 = 13 | vuelve a pedir 13|si|
+| Número con texto | 1, `abc` (luego 8), 5 | `leerDecimal` vuelve a pedir; 8 + 5 = 13 | vuelve a pedir 13|si|
+| Caso propio 1 | 2, -10, -5|-10 - (-5) = -5|-5|si|
+| Caso propio 2 | 4, 9.9, 3.3 |9.9 / 3.3 = 3|3|si|
 
 ## 11. Bitácora de mejoras (Fase 4)
 
 | # | ¿Qué falló o qué quise mejorar? | ¿Qué cambié? | ¿Funcionó? |
 |---|---|---|---|
-| 1 | _____ | _____ | _____ |
-| 2 | _____ | _____ | _____ |
+| 1 |	El programa se cerraba al dividir entre cero|nada|no
+| 2 | La división con enteros daba resultados truncados (7/2 = 3)|Cambié las variables int por double para aceptar decimales |si |
 
 **¿Encontré algo que la receta no contemplaba? ¿Qué?**
-_____
+al usar int la division no descarta decimales
 
-**Reto elegido (opcional):** _____
-
+**Reto elegido (opcional):**usar if para que al dividir entre 0 no se crashee
 ## 12. Dudas para el profesor (Fase 3)
 
 | Duda | Lo que ya intenté |
 |---|---|
-| _____ | _____ |
+|hacer el if | crearlo pero no funciono |
 
 ## 13. Reflexión final
 
 **¿Qué aprendí con esta práctica?**
-_____
+a usar switch y case
 
 **Ahora que terminé, ¿qué cambiaría de mi proceso?**
-_____
+nada
 
 **¿Qué fue lo más difícil y cómo lo resolví?**
-_____
+usar switch y a prueba y error
 
 **¿Qué pregunta me quedó sin responder?**
-_____
+el uso del if
 
 **¿Fue más fácil programar a partir de una receta ajena que de la mía? ¿Por qué?**
-_____
+fue facil programar de la receta
 
 **Si yo hubiera diseñado la receta, ¿qué le cambiaría?**
-_____
+nada
 
 ## 14. Lista de verificación antes de entregar (Fase 5)
 

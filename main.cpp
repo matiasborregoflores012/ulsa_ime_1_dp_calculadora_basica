@@ -58,9 +58,7 @@ case 1:
    std:: cin >> numero1;
    std:: cout << "ingrese numero 2=";
    std:: cin >> numero2;  
-if (numero2 !=0){
 
-}
 
  division = numero1 / numero2;
 
